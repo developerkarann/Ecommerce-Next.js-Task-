@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Interview Task Assigmnet
 
-## Getting Started
+Dynamic Web Page Assignment Submission
+Overview
 
-First, run the development server:
+This submission showcases a dynamic web page created using the Next.js framework as per the assignment requirements. The web page consists of a header component, a menu component, and a main component that lists product cards. The product data is fetched from a given API using Axios. The project is hosted on Netlify, and the codebase is available on GitHub.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features
+Header Component: header that contains logo on left side and icons for search, bookmark etc.
+Menu Component: An menu section for different different categories of products for easy navigation.
+Main Component: Displays product cards with data fetched from an API.
+API Integration: Utilizes Axios for fetching product data from the provided API.
+Next.js: A powerful React framework for building fast and scalable web applications.
+React: A JavaScript library for building user interfaces.
+Axios: A promise-based HTTP client for making API requests.
+Tailwind Css: For scoped and modular CSS styling.
+Netlify: A platform for deploying and hosting the web application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+API Integration
+The product data is fetched from an external API using Axios. And storing data in the state variable using useState hook and using useEffect hook for fetching data when webpage is getting render. Here is an example of how the API request is made:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-------------------------
+import axios from 'axios';
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  //Feting data from the given API
+  const fetchData = async () => {
+    try {
+      const resposne = await axios.get('https://fakestoreapi.com/products');
+      const { data } = resposne;
+      setProductData(data.slice(0, 8));
+      // API is giving the of 25 producst so using array.slice() method to show only 8 product as it was required 
+    } catch (error) {
+      console.log('Getting while fetching data', error.message)
+    }
+  }
+---------------------
 
-## Learn More
+Deployment
+The project is deployed on Netlify. You can view the live application using the following link: Live Demo
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Thank you so much for this wonderfull opportunity. I look forward to hearings from you soon.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Karan Pal - karanpal03040@gmail.com
+Phone no. - 91+ 8869012507
+portfolio - https://karandeveloper.vercel.app
